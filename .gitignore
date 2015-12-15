@@ -12,3 +12,6 @@
 
 # Exclude composer managed vendor directories.
 /vendor
+
+# Exclude phpunit helper symlink.
+/phpunit
