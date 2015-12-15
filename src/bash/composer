@@ -1,0 +1,2 @@
+#!/bin/bash
+php-cli -d memory_limit=512M -d detect_unicode=Off -d allow_url_fopen=1 -d suhosin.executor.include.whitelist=phar composer.phar "$@"
