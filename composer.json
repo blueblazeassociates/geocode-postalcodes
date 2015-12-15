@@ -1,0 +1,34 @@
+{
+  "name" : "blueblazeassociates/geocode-zipcode",
+  "description" : "A quick geocoder for US ZIP codes.",
+  "type" : "library",
+  "homepage" : "https://github.com/blueblazeassociates/geocoding",
+  "license" : "GPL-2.0+",
+  "authors": [{
+      "name" : "Ed Gifford",
+      "homepage" : "http://www.blueblazeassociates.com",
+      "email" : "egifford@blueblazeassociates.com"
+  }],
+  "keywords" : [
+    "geocode",
+    "geocoding",
+    "zipcode",
+    "zip code",
+    "latitude",
+    "longitude"
+  ],
+  "minimum-stability": "stable",  
+  "require": {
+    "php" : ">=5.4",
+    "anthonymartin/geo-location" : "^1.0.0",
+    "willdurand/geocoder" : "^3.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.0.0"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "BlueBlazeAssociates\\Geocode\\" : "src/php"
+    }
+  }
+}
