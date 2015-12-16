@@ -1,48 +1,11 @@
 <?php
 
-namespace BlueBlazeAssociates\Geocode;
+namespace BlueBlazeAssociates\Geocoding;
 
 /**
  * @author Ed Gifford
  */
 class LatLonRange {
-  /**
-   * Validate distance.
-   *
-   * Distance must be a positive integer.
-   *
-   * @param string|integer $distance
-   *
-   * @return boolean
-   */
-  public static function validate_distance( $distance ) {
-    $valid = filter_var( $distance, FILTER_VALIDATE_INT,
-        array( 'options' => array(
-            'min_range' => 1,
-            'max_range' => PHP_INT_MAX
-        ))
-        );
-
-    return false !== $valid ? true : false;
-  }
-
-  /**
-   * Normalize distance format.
-   *
-   * @param string distance
-   *
-   * @return string Returns empty string if distance isn't valid.
-   */
-  public static function format_distance( $distance ) {
-    $valid = static::validate_distance( $distance );
-
-    if ( false === $valid ) {
-      return '';
-    }
-
-    return $distance;
-  }
-
   /**
    * @param LatLon $latlon
    * @param string|integer $distance In miles
@@ -51,19 +14,19 @@ class LatLonRange {
    *
    * @throws GeocodingException
    */
-  public static function createFromDistance( $latlon, $distance ) {
+  public static function create_from_distance( $latlon, $distance ) {
     if ( ! ( $latlon instanceof LatLon ) ) {
       throw new GeocodingException( '$latlon parameter is not a LatLon object.' );
     }
 
-    $distance_formated = static::format_distance( $distance );
+    $distance_formated = Utils::format_distance( $distance );
     if ( empty( $distance_formated ) ) {
       throw new GeocodingException( 'Distance value is invalid: ' . $distance );
     }
     $distance = $distance_formated;
 
     // Calculate the bounding box on the globe.
-    $center = \AnthonyMartin\GeoLocation\GeoLocation::fromDegrees( $latlon->getLat(), $latlon->getLon() );
+    $center = \AnthonyMartin\GeoLocation\GeoLocation::fromDegrees( $latlon->get_lat(), $latlon->get_lon() );
     $bounds = $center->boundingCoordinates( $distance, 'miles' );
 
     $min = new LatLon( $bounds[0]->getLatitudeInDegrees(), $bounds[0]->getLongitudeInDegrees() );
@@ -86,10 +49,10 @@ class LatLonRange {
       throw new GeocodingException( 'Maximum value is not a LatLon object.' );
     }
 
-    if ( ! ( $min->getLat() <= $max->getLat() ) ) {
+    if ( ! ( $min->get_lat() <= $max->get_lat() ) ) {
       throw new GeocodingException( 'Minimum latitude is larger than maximum latitude.' );
     }
-    if ( ! ( $min->getLon() <= $max->getLon() ) ) {
+    if ( ! ( $min->get_lon() <= $max->get_lon() ) ) {
       throw new GeocodingException( 'Minimum longitude is larger than maximum longitude.' );
     }
 
@@ -100,14 +63,14 @@ class LatLonRange {
   /**
    * @return LatLon
    */
-  public function getMin() {
+  public function get_min() {
     return $this->min;
   }
 
   /**
    * @return LatLon
    */
-  public function getMax() {
+  public function get_max() {
     return $this->max;
   }
 
