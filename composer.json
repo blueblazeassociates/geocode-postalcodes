@@ -30,5 +30,8 @@
     "psr-4" : {
       "BlueBlazeAssociates\\Geocoding\\" : "src/php"
     }
+  },
+  "extra" : {
+    "coding-standard" : "Using WordPress PHP standard but using spaces for indentation instead of tabs."
   }
 }
