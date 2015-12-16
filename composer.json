@@ -28,7 +28,7 @@
   },
   "autoload" : {
     "psr-4" : {
-      "BlueBlazeAssociates\\Geocode\\" : "src/php"
+      "BlueBlazeAssociates\\Geocoding\\" : "src/php"
     }
   }
 }
