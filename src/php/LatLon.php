@@ -33,14 +33,14 @@ class LatLon {
   /**
    * @return float
    */
-  public function getLat() {
+  public function get_lat() {
     return $this->lat;
   }
 
   /**
    * @return float
    */
-  public function getLon() {
+  public function get_lon() {
     return $this->lon;
   }
 

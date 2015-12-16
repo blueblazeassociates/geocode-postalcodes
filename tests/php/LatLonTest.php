@@ -22,7 +22,7 @@ class LatLonTest extends \PHPUnit_Framework_TestCase {
     $latlon = new LatLon( $lat_value, $lon_value  );
 
     // Assert
-    $this->assertEquals( $lat_value, $latlon->getLat() );
+    $this->assertEquals( $lat_value, $latlon->get_lat() );
   }
 
   /**
@@ -37,7 +37,7 @@ class LatLonTest extends \PHPUnit_Framework_TestCase {
     $latlon = new LatLon( $lat_value, $lon_value  );
 
     // Assert
-    $this->assertEquals( $lon_value, $latlon->getLon() );
+    $this->assertEquals( $lon_value, $latlon->get_lon() );
   }
 
   /**
