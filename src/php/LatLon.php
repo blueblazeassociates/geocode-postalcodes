@@ -1,13 +1,12 @@
 <?php
 
-namespace BlueBlazeAssociates\Geocode;
+namespace BlueBlazeAssociates\Geocoding;
 
 /**
  * @author Ed Gifford
  */
 class LatLon {
   /**
-   *
    * @param string|float $lat
    * @param string|float $lon
    *
