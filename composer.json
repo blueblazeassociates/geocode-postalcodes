@@ -1,5 +1,5 @@
 {
-  "name" : "blueblazeassociates/geocode-zipcode",
+  "name" : "blueblazeassociates/geocode-postalcodes",
   "description" : "A quick geocoder for US ZIP codes.",
   "type" : "library",
   "homepage" : "https://github.com/blueblazeassociates/geocode-postalcodes",
