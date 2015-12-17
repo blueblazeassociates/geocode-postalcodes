@@ -1,10 +1,15 @@
 <?php
 
-namespace BlueBlazeAssociates\Geocode;
+namespace BlueBlazeAssociates\Geocoding;
 
 /**
  * @author Ed Gifford
  */
-class GeocodingProviders {
+abstract class GeocodingProviders {
+  /**
+   * Google Maps
+   *
+   * @var string
+   */
   const GOOGLE_MAPS = 'GOOGLE_MAPS';
 }

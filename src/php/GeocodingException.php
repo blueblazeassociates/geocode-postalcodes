@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueBlazeAssociates\Geocode;
+namespace BlueBlazeAssociates\Geocoding;
 
 /**
  * @author Ed Gifford
