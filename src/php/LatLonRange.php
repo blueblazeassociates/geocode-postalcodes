@@ -19,11 +19,10 @@ class LatLonRange {
       throw new GeocodingException( '$latlon parameter is not a LatLon object.' );
     }
 
-    $distance_formated = Utils::format_distance( $distance );
-    if ( empty( $distance_formated ) ) {
+    if ( ! Utils::validate_distance( $distance ) ) {
       throw new GeocodingException( 'Distance value is invalid: ' . $distance );
     }
-    $distance = $distance_formated;
+    $distance = (string) $distance;
 
     // Calculate the bounding box on the globe.
     $center = \AnthonyMartin\GeoLocation\GeoLocation::fromDegrees( $latlon->get_lat(), $latlon->get_lon() );

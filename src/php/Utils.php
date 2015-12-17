@@ -25,21 +25,4 @@ abstract class Utils {
 
     return false !== $valid ? true : false;
   }
-
-  /**
-   * Normalize distance format.
-   *
-   * @param string distance
-   *
-   * @return string Returns empty string if distance isn't valid.
-   */
-  public static function format_distance( $distance ) {
-    $valid = static::validate_distance( $distance );
-
-    if ( false === $valid ) {
-      return '';
-    }
-
-    return $distance;
-  }
 }
