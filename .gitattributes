@@ -7,7 +7,7 @@
 /.gitignore export-ignore
 
 # Bash helper scripts
-/src/bash
+/src/bash export-ignore
 
 # Tests
 /tests export-ignore
