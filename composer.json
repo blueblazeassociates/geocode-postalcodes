@@ -17,7 +17,7 @@
     "latitude",
     "longitude"
   ],
-  "minimum-stability": "stable",  
+  "minimum-stability": "stable",
   "require": {
     "php" : ">=5.4",
     "anthonymartin/geo-location" : "^1.0.0",
