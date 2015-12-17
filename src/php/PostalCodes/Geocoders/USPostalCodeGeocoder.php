@@ -43,7 +43,7 @@ class USPostalCodeGeocoder extends BasePostalCodeGeocoder {
    * @return LatLon
    */
   public function geocode( $postal_code ) {
-    // Format/validate ZIP code.
+    // Validate ZIP code.
     if ( false == static::validate_postal_code( $postal_code ) ) {
       throw new GeocodingException( 'ZIP code value is invalid: ' . $postal_code );
     }
