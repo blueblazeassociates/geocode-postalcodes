@@ -2,7 +2,7 @@
   "name" : "blueblazeassociates/geocode-zipcode",
   "description" : "A quick geocoder for US ZIP codes.",
   "type" : "library",
-  "homepage" : "https://github.com/blueblazeassociates/geocoding",
+  "homepage" : "https://github.com/blueblazeassociates/geocode-postalcodes",
   "license" : "GPL-2.0+",
   "authors": [{
       "name" : "Ed Gifford",
