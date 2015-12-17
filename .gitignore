@@ -1,3 +1,7 @@
+##
+# The following settings control what folders/files are ignored (or not ignored) by Git.
+##
+
 # Exclude Eclipse IDE files.
 /.settings
 /.buildpath
